@@ -1,10 +1,9 @@
-<!-- Updated -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>luxe_ai_queens - Links</title>
+    <title>Ivanka AI - Private Links</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +12,9 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Arial', sans-serif;
+            /* Более чувственный градиент для дейтинга */
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,115 +23,148 @@
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            padding: 50px 40px;
-            max-width: 450px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             text-align: center;
-            animation: slideIn 0.6s ease-out;
+            animation: slideIn 0.5s ease-out;
         }
         
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
+        .avatar-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+        }
+
         .avatar {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 60px;
-            color: white;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Зеленая точка "Онлайн" */
+        .status-dot {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #4CAF50;
+            border: 3px solid white;
+            border-radius: 50%;
         }
         
         h1 {
-            color: #333;
-            font-size: 32px;
-            margin-bottom: 15px;
-            font-weight: 700;
+            color: #1a1a1a;
+            font-size: 26px;
+            margin-bottom: 8px;
+            font-weight: 800;
         }
         
-        .subtitle {
-            color: #888;
+        .username {
+            color: #666;
             font-size: 14px;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .bio {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
         
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
         }
         
         .link-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 16px 24px;
-            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 20px;
+            border-radius: 16px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-            display: block;
-            text-align: center;
-        }
-        
-        .link-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .link-button:active {
-            transform: translateY(-2px);
+            transform: scale(0.98);
+        }
+
+        /* Кнопка Чата (Trafee) */
+        .btn-chat {
+            background: linear-gradient(90deg, #FF512F 0%, #DD2476 100%); /* Горячий градиент */
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(221, 36, 118, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(221, 36, 118, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(221, 36, 118, 0); }
+        }
+
+        /* Кнопка Fanvue */
+        .btn-fanvue {
+            background: white;
+            color: #333;
+            border: 2px solid #f0f0f0;
         }
         
-        .link-button.trafee {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .btn-icon {
+            margin-right: 10px;
+            font-size: 20px;
         }
-        
-        .link-button.fanvue {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
+
         .footer {
-            margin-top: 40px;
-            color: #ccc;
+            margin-top: 30px;
+            color: #999;
             font-size: 12px;
-            padding-top: 30px;
-            border-top: 1px solid #f0f0f0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="avatar">✨</div>
-        <h1>luxe_ai_queens</h1>
-        <p class="subtitle">Discover exclusive content and opportunities</p>
+        <div class="avatar-container">
+            <img src="avatar.jpg" alt="AI Girl" class="avatar">
+            <div class="status-dot"></div>
+        </div>
+        
+        <h1>Ivanka AI ❤️</h1>
+        <p class="username">@luxe_ai_queens</p>
+        <p class="bio">Virtual Soulmate & Digital Art.<br>Waiting for you to say hi... 👇</p>
         
         <div class="links">
-            <a href="https://dedicha.clikklocal.com/s/d04bd79d891a5">💰 Chat with me now</a>
-            <a href="https://www.fanvue.com/lovely_ivanka" class="link-button fanvue">🙋‍♀️ My Secret Gallery</a>
+            <a href="https://dedicha.clikklocal.com/s/d04bd79d891a5" class="link-button btn-chat">
+                <span class="btn-icon">💬</span> Chat with me now
+            </a>
+            
+            <a href="https://www.fanvue.com/lovely_ivanka" class="link-button btn-fanvue">
+                <span class="btn-icon">🔞</span> My Secret Gallery
+            </a>
         </div>
         
         <div class="footer">
-            <p>Your gateway to amazing opportunities</p>
+            <p>18+ Content Only</p>
         </div>
     </div>
 </body>
